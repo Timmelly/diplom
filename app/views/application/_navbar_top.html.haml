@@ -15,10 +15,10 @@
       %li
         = link_to login_path do
           = @current_user.blank? ? 'войти' : @current_user.email
-      %li
+      %li{style: 'height: 100%;'}
         - if @current_user.blank?
-          = link_to login_path do
-            = fa_icon 'sign-in'
+          = link_to login_path, style: 'height: 100%;' do
+            = fa_icon 'sign-in', class: "fa-2x", style: "padding-top: 10px; padding-bottom: 10px;"
         - else
-          = link_to logout_path do
-            = fa_icon 'sign-out'
+          = link_to logout_path, style: 'height: 100%;' do
+            = fa_icon 'sign-out', class: "fa-2x", style: "padding-top: 10px; padding-bottom: 10px;"

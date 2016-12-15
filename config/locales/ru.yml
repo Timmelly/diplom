@@ -1,0 +1,21 @@
+ru:
+  app:
+    name: БП
+    company:
+      short_name:  МПУ
+      department: Кафедра 
+  helpers:
+    submit:
+      create: Сохранить
+      submit: Сохранить
+      update: Сохранить
+
+  views:
+    pagination:
+      first: ⇤
+      last: ⇥
+      previous: ←
+      next: →
+      truncate: …
+  activerecord:
+   
