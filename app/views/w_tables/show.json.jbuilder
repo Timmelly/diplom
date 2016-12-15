@@ -1,0 +1,1 @@
+json.partial! "w_tables/w_table", w_table: @w_table

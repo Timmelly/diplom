@@ -1,0 +1,1 @@
+json.array! @geometry_classes, partial: 'geometry_classes/geometry_class', as: :geometry_class

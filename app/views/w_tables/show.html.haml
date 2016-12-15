@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Geometry classes:
+  = @w_table.geometry_classes
+%p
+  %b Front side:
+  = @w_table.front_side
+%p
+  %b X:
+  = @w_table.x
+%p
+  %b Y:
+  = @w_table.y
+
+= link_to 'Edit', edit_w_table_path(@w_table)
+\|
+= link_to 'Back', w_tables_path

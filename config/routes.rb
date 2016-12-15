@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root :to => 'users#index'
+  resources :w_tables
+  resources :geometry_classes
+  get 'welcome/index'
+
+  resources :computers
+  root :to => 'welcome#index'
   resources :user_sessions
   resources :users do
     member do

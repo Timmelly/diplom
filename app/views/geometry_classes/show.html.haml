@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Room:
+  = @geometry_class.room
+%p
+  %b Bilding:
+  = @geometry_class.bilding
+%p
+  %b Floor:
+  = @geometry_class.floor
+%p
+  %b X:
+  = @geometry_class.x
+%p
+  %b Y:
+  = @geometry_class.y
+%p
+  %b Ip:
+  = @geometry_class.ip
+
+= link_to 'Edit', edit_geometry_class_path(@geometry_class)
+\|
+= link_to 'Back', geometry_classes_path

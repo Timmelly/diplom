@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: MyString
+  bilding: MyString
+  floor: 1
+  x: 
+  'y': 
+  ip: MyString
+
+two:
+  room: MyString
+  bilding: MyString
+  floor: 1
+  x: 
+  'y': 
+  ip: MyString

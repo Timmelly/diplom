@@ -1,0 +1,31 @@
+%h1 Listing geometry_classes
+
+%table
+  %thead
+    %tr
+      %th Room
+      %th Bilding
+      %th Floor
+      %th X
+      %th Y
+      %th Ip
+      %th
+      %th
+      %th
+
+  %tbody
+    - @geometry_classes.each do |geometry_class|
+      %tr
+        %td= geometry_class.room
+        %td= geometry_class.bilding
+        %td= geometry_class.floor
+        %td= geometry_class.x
+        %td= geometry_class.y
+        %td= geometry_class.ip
+        %td= link_to 'Show', geometry_class
+        %td= link_to 'Edit', edit_geometry_class_path(geometry_class)
+        %td= link_to 'Destroy', geometry_class, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Geometry class', new_geometry_class_path

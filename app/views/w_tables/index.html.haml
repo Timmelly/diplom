@@ -1,0 +1,27 @@
+%h1 Listing w_tables
+
+%table
+  %thead
+    %tr
+      %th Geometry classes
+      %th Front side
+      %th X
+      %th Y
+      %th
+      %th
+      %th
+
+  %tbody
+    - @w_tables.each do |w_table|
+      %tr
+        %td= w_table.geometry_classes
+        %td= w_table.front_side
+        %td= w_table.x
+        %td= w_table.y
+        %td= link_to 'Show', w_table
+        %td= link_to 'Edit', edit_w_table_path(w_table)
+        %td= link_to 'Destroy', w_table, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New W table', new_w_table_path

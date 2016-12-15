@@ -1,0 +1,22 @@
+= form_for @w_table do |f|
+  - if @w_table.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@w_table.errors.count, "error")} prohibited this w_table from being saved:"
+      %ul
+        - @w_table.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :geometry_classes
+    = f.text_field :geometry_classes
+  .field
+    = f.label :front_side
+    = f.number_field :front_side
+  .field
+    = f.label :x
+    = f.text_field :x
+  .field
+    = f.label :y
+    = f.text_field :y
+  .actions
+    = f.submit 'Save'

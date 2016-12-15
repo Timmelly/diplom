@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geometry_classes: one
+  front_side: 1
+  x: 
+  'y': 
+
+two:
+  geometry_classes: two
+  front_side: 1
+  x: 
+  'y': 

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @computer.name
+%p
+  %b X:
+  = @computer.x
+%p
+  %b Y:
+  = @computer.y
+%p
+  %b Ip:
+  = @computer.ip
+%p
+  %b Mac address:
+  = @computer.mac_address
+%p
+  %b Specification:
+  = @computer.specification
+%p
+  %b Wtable:
+  = @computer.wtable
+
+= link_to 'Edit', edit_computer_path(@computer)
+\|
+= link_to 'Back', computers_path

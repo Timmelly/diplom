@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  x: 1.5
+  'y': 1.5
+  ip: MyString
+  mac_address: MyString
+  specification: MyText
+  wtable: one
+
+two:
+  name: MyText
+  x: 1.5
+  'y': 1.5
+  ip: MyString
+  mac_address: MyString
+  specification: MyText
+  wtable: two

@@ -1,0 +1,1 @@
+json.partial! "geometry_classes/geometry_class", geometry_class: @geometry_class
