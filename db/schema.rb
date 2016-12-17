@@ -40,13 +40,21 @@ ActiveRecord::Schema.define(version: 20161215203849) do
   end
 
   create_table "role_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.jsonb    "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_role_users_on_role_id", using: :btree
+    t.index ["user_id"], name: "index_role_users_on_user_id", using: :btree
   end
 
   create_table "roles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "role_name_eng"
+    t.string   "role_name"
+    t.string   "full_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
