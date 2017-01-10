@@ -1,15 +1,14 @@
 ru:
   app:
-    name: БП
+    name: Управление классами
     company:
-      short_name:  МПУ
-      department: Кафедра 
+      short_name: Сафронова А.
+      department: Сафронова А.
   helpers:
     submit:
       create: Сохранить
       submit: Сохранить
       update: Сохранить
-
   views:
     pagination:
       first: ⇤
@@ -17,5 +16,3 @@ ru:
       previous: ←
       next: →
       truncate: …
-  activerecord:
-   

@@ -1,5 +1,6 @@
 class UserSessionsController < ApplicationController
   skip_before_action :require_login, except: [:destroy]
+  ## Эти методы надо показывать всем
   skip_before_action :check_app_auth
   
   def new

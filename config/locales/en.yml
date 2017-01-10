@@ -20,4 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app:
+    name: Сomputers management 
+    company:
+      short_name: Safronova A.
+      department: Safronova A. 
+  helpers:
+    submit:
+      create: Save
+      submit: Save
+      update: Save
+  views:
+    pagination:
+      first: ⇤
+      last: ⇥
+      previous: ←
+      next: →
+      truncate: …

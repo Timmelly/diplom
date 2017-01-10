@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215203849) do
+ActiveRecord::Schema.define(version: 20170106204153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20161215203849) do
   end
 
   create_table "role_users", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "role_id"
+    t.integer  "user_id"
     t.jsonb    "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,11 +50,11 @@ ActiveRecord::Schema.define(version: 20161215203849) do
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string   "role_name_eng"
-    t.string   "role_name"
-    t.string   "full_name"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "name"
+    t.string   "info"
+    t.text     "full_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,5 +88,7 @@ ActiveRecord::Schema.define(version: 20161215203849) do
   end
 
   add_foreign_key "computers", "w_tables"
+  add_foreign_key "role_users", "roles"
+  add_foreign_key "role_users", "users"
   add_foreign_key "w_tables", "geometry_classes", column: "geometry_classes_id"
 end

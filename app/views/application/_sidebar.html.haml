@@ -7,21 +7,17 @@
             = fa_icon(item[:icon], class: 'menu-icon')
             = item[:name]
             %span.pull-right.carret
-              = fa_icon('angle-down', class: 'menu-icon')              
+              = fa_icon('angle-down', class: 'menu-icon')
           %ul.subitems{class: (item[:children].any?{ |subitem| is_open?(subitem[:controller], subitem[:action]) } ? :subopen : :subclose)}
             - item[:children].each do |subitem|
               %li.subitem
-                - if subitem.has_key?(:params)
-                  = link_to(url_for({controller: subitem[:controller], action: subitem[:action]}.merge(subitem[:params])), class: subitem[:class]) do        
-                    = fa_icon(subitem[:icon], class: 'menu-icon')
-                    = subitem[:name]
-                - else
-                  = link_to(url_for(controller: subitem[:controller], action: subitem[:action]), class: subitem[:class]) do        
-                    = fa_icon(subitem[:icon], class: 'menu-icon')
-                    = subitem[:name]
+                = link_to(subitem[:url], class: subitem[:class]) do
+                  = fa_icon(subitem[:icon], class: 'menu-icon')
+                  = subitem[:name]
         - else
-          = link_to(url_for(controller: item[:controller], action: item[:action]), class: item[:class]) do
+          = link_to(item[:url], class: [item[:class], 'without-subitems'].compact.join(' ')) do
             = fa_icon(item[:icon], class: 'menu-icon')
             = item[:name]
     %li.footer
       %div
+        Сафронова А.

@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :roles
   resources :w_tables
   resources :geometry_classes
-  get 'welcome/index'
-
+  get 'welcome/index', as: :index 
+  get 'welcome/insufficient_privileges', as: :ip
+  
   resources :computers
   root :to => 'welcome#index'
   resources :user_sessions

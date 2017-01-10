@@ -1,16 +1,26 @@
+# Роль пользователя
+# name - название роли (латиницей)
+# info - сокращённое название (кириллицей)
+# full_info - полное название (кириллицей)
+
 class Role < ApplicationRecord
-  has_many :role_user
-def self.create_main_roles
-    r1 = Role.find_or_create_by(role_name_eng: 'admin',
-      role_name: 'Администратор',
-      full_name: 'Администратор портала')
-    r2 = Role.find_or_create_by(role_name_eng: 'teacher',
-      role_name: 'Преподаватель',
-      full_name: 'Преподаватель')
+  has_many :role_users
+
+  validates :name, presence: true, uniqueness: true   
+  validates :info, presence: true, uniqueness: true
+  validates :full_info, presence: true, uniqueness: true 
+  
+  def self.create_main_roles
+    r1 = Role.find_or_create_by(name: 'admin', 
+      info: 'Администратор',
+      full_info: 'Администратор системы')
+    r2 = Role.find_or_create_by(name: 'operator', 
+      info: 'Оператор',
+      full_info: 'Оператор')
     [r1, r2]
   end
 
-  ROLE_FOR_METHODS = ['admin', 'teacher']
+  ROLE_FOR_METHODS = ['admin', 'operator']
   
   ROLE_FOR_METHODS.each do |rname|
     define_method "is_#{rname}?" do
@@ -18,3 +28,4 @@ def self.create_main_roles
     end
   end
 end
+

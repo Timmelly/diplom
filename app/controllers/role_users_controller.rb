@@ -69,6 +69,6 @@ class RoleUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def role_user_params
-      params.fetch(:role_user, {})
+      params.require(:role_user).permit(:role_id, :user_id, :data)
     end
 end

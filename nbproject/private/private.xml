@@ -3,20 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/radigin/base_app5/config/initializers/sorcery.rb</file>
-            <file>file:/home/radigin/base_app5/config/routes.rb</file>
-            <file>file:/home/radigin/base_app5/app/models/user.rb</file>
-            <file>file:/home/radigin/base_app5/app/controllers/application_controller.rb</file>
-            <file>file:/home/radigin/base_app5/app/controllers/users_controller.rb</file>
-            <file>file:/home/radigin/base_app5/app/views/user_mailer/activation_needed_email.text.haml</file>
-            <file>file:/home/radigin/base_app5/app/views/users/new.html.haml</file>
-            <file>file:/home/radigin/base_app5/app/views/users/_form.html.haml</file>
-            <file>file:/home/radigin/base_app5/app/mailers/user_mailer.rb</file>
-            <file>file:/home/radigin/base_app5/app/views/user_mailer/activation_success_email.text.haml</file>
-            <file>file:/home/radigin/base_app5/app/views/user_sessions/new.html.haml</file>
-            <file>file:/home/radigin/base_app5/app/views/layouts/application.html.erb</file>
-            <file>file:/home/radigin/base_app5/app/views/user_sessions/_form.html.haml</file>
-            <file>file:/home/radigin/base_app5/app/controllers/user_sessions_controller.rb</file>
+            <file>file:/home/radigin/Al/diplom/Gemfile</file>
+            <file>file:/home/radigin/Al/diplom/app/models/role_user.rb</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/navbar.sass</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/javascripts/sidebar.coffee</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/buttons.sass</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/sidebar.sass</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/javascripts/application.js</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/theme.sass</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/welcome.sass</file>
+            <file>file:/home/radigin/Al/diplom/config/locales/en.yml</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/javascripts/main.coffee</file>
+            <file>file:/home/radigin/Al/diplom/app/helpers/error_messages_helper.rb</file>
+            <file>file:/home/radigin/Al/diplom/app/views/application/_error_messages_for.html.haml</file>
+            <file>file:/home/radigin/Al/diplom/config/locales/ru.yml</file>
+            <file>file:/home/radigin/Al/diplom/app/helpers/side_bar_helper.rb</file>
+            <file>file:/home/radigin/Al/diplom/app/assets/stylesheets/main.sass</file>
+            <file>file:/home/radigin/Al/diplom/app/views/application/_sidebar.html.haml</file>
+            <file>file:/home/radigin/Al/diplom/app/views/application/_breadcrumb.html.haml</file>
         </group>
     </open-files>
 </project-private>

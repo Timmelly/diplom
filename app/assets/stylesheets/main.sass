@@ -42,6 +42,7 @@ a
 .label
   font-weight: normal
   border-radius: 0
+  white-space: normal
 
 .toleft
   display: inline-block
@@ -50,11 +51,25 @@ a
     font-size: 90%
     display: inline-block
     padding: 4px 8px 4px 8px
+    margin-right: 4px
     min-width: 110px
     .tiny
       font-size: 75%
     .text-warning
       color: $text-yellow
+    &.red
+      background: $brand-danger
+    &.green
+      background: $brand-success
+    &.yellow
+      background: $brand-warning
+    &.grey
+      background: $gray-light
+    &.blue
+      background: $brand-primary
+    &.lightblue
+      background: $brand-info
+
   .link
     font-family: 'Intro'
 
@@ -65,11 +80,24 @@ a
     font-size: 90%
     display: inline-block
     padding: 4px 8px 4px 8px
+    margin-left: 4px
     min-width: 110px
     .tiny
       font-size: 75%
     .text-warning
       color: $text-yellow
+    &.red
+      background: $brand-danger
+    &.green
+      background: $brand-success
+    &.yellow
+      background: $brand-warning
+    &.grey
+      background: $gray-light
+    &.blue
+      background: $brand-primary
+    &.lightblue
+      background: $brand-info
   .link
     font-family: 'Intro'
 
@@ -128,6 +156,8 @@ a
   margin: 2px 2px 2px 2px
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6)
   min-width: 75px
+  &.label-double
+    min-width: 158px
 .tiny
   text-align: center
   font-size: 80%
@@ -173,13 +203,24 @@ a
     font-size: 80%
     display: inline-block
   &.badge-middle
-    min-width: 100px    
+    min-width: 100px
   &.badge-long
-    min-width: 130px    
+    min-width: 130px
 .notop
   border-top-style: none
 .nobottom
   border-bottom-style: none
+.mark-label
+  @extend .alert
+  padding: 1px 1px 1px 1px
+  margin: 2px 2px 2px 2px
+  width: 20px
+  text-align: center
+  border-radius: 4px
+  $x_sizes: (15 20 25)
+  @each $x_size in $x_sizes
+    &.x#{$x_size}
+      width: #{$x_size}px
 .alert-label
   @extend .alert
   padding: 5px 15px 5px 15px
@@ -190,9 +231,18 @@ a
   text-align: center
   border-radius: 7px
   $x_sizes: (150 200 300 400 500 600)
-  @each $x_size in $x_sizes 
+  @each $x_size in $x_sizes
     &.x#{$x_size}
       width: #{$x_size}px
+.alert-label-small
+  @extend .alert
+  padding: 3px 5px 3px 5px
+  margin-left: 3px
+  margin-right: 3px
+  font-size: 80%
+  font-family: Intro
+  text-align: center
+  border-radius: 3px
 .panel
   .panel-body
     .nomargins
@@ -229,16 +279,24 @@ a
   top: 25%
   width: 100%
   text-align: center
-$paddings: (5 10 20 30 40 50)
-@each $padding  in $paddings 
+$paddings: (5 10 20 30 40 50 100 150 200 250)
+@each $padding  in $paddings
   .left#{$padding}
     padding-left: #{$padding}px
   .right#{$padding}
     padding-right: #{$padding}px
+  .top#{$padding}
+    padding-top: #{$padding}px
+  .bottom#{$padding}
+    padding-bottom: #{$padding}px
   .mleft#{$padding}
     margin-left: #{$padding}px
   .mright#{$padding}
     margin-right: #{$padding}px
+  .mtop#{$padding}
+    margin-top: #{$padding}px
+  .mbottom#{$padding}
+    margin-bottom: #{$padding}px
 
 @media print
   a[href]:after
@@ -254,7 +312,66 @@ $paddings: (5 10 20 30 40 50)
     #sidebar-toggle
       left: 0
 $percents: (90 85 80 75 70 65 60 55 50 40 30 20 10 5)
-@each $percent in $percents 
+@each $percent in $percents
   .small#{$percent}
     font-size: #{$percent+'%'}
     padding: #{round($padding-base-vertical * $percent / 100)} #{round($padding-base-horizontal * $percent / 100)} #{round($padding-base-vertical * $percent / 100)} #{round($padding-base-horizontal * $percent / 100)}
+.non100
+  width: auto
+.absolute-button
+  position: fixed
+  left: $sidebar-width + 30px
+  width: 200px
+
+.tabdrop.open
+  .dropdown-menu > li
+    &.pull-right
+      float: none !important
+    a
+      color: $brand-primary
+      border: none
+      border-radius: 0
+.bordered
+  border-style: solid
+  border-color: $sidebar-right-border-color
+  border-width: 1px
+  border-radius: 5px
+  margin: 5px
+  padding: 10px
+.no-panel-body
+  padding: 0px
+$lines: (0 5 10 15 20 25 30)
+@each $line in $lines
+  td.line#{$line}
+    border-color: $navbar-inverse-bg
+    border-style: solid
+    border-width: 0 0 0 1px
+    padding-left: 0px !important
+    width: 800 px
+    span.line#{$line}
+      display: inline-block
+      height: 20px
+      &::before
+        border-color: $navbar-inverse-bg
+        border-style: solid
+        border-width: 1px 0 0
+        content: ""
+        display: block
+        left: 0px
+        top: 15px
+        width: $line * 20px
+        position: relative
+    .bl20
+      padding-left: 20px
+      display: inline-block
+      width: 800 - $line * 20px
+.no-appearance
+  -webkit-appearance: textfield
+  -moz-appearance: textfield
+  appearance: textfield    
+.red-box
+  border-style: solid !important
+  border-color: red !important
+  border-width: 10px !important
+.red-txt
+  color: red
